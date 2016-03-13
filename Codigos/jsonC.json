@@ -1,0 +1,95 @@
+{
+  "//": "Please only change this file when pimatic is NOT running, otherwise pimatic will overwrite your changes.",
+  "settings": {
+    "httpServer": {
+      "enabled": true,
+      "port": 8080      
+    },
+    "database": {
+    }
+  },
+  "plugins": [
+    { 
+      "plugin": "cron" 
+    }, 
+   {
+      "plugin": "mysensors",
+      "driver": "serialport",
+      "protocols": "1.4.1",
+      "driverOptions": {
+      "serialDevice": "/dev/ttyACM0",
+      "baudrate": 115200
+      }
+    }, 
+    { 
+      "plugin": "mobile-frontend"
+    }
+  ],
+  "devices": [
+    {
+      "id": "Light_1",
+      "name": "Sensor LDR",
+      "class": "MySensorsLight",
+      "nodeid": 2,
+      "sensorid": 3
+    },
+    {
+      "id": "Switch_LED",
+      "name": "LED",
+      "class": "MySensorsSwitch",
+      "nodeid": 3,
+      "sensorid": 1
+    },
+    {
+      "id": "DHT11_1",
+      "name": "Sensor Temperatura 01",
+      "class": "MySensorsDHT",
+      "nodeid": 2,
+      "sensorid": [
+        0,
+        1
+      ]
+    }
+
+  ],
+  "rules": [
+
+  ],
+  "pages": [ 
+    {
+      "id": "favourite",
+      "name": "Favourites",
+      "devices": []
+    }
+  ],
+  "groups": [
+
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"  
+    }
+  ],
+  "roles": [
+    {
+      "name": "admin",
+      "permissions": {
+        "pages": "write",
+        "rules": "write",
+        "variables": "write",
+        "messages": "write",
+        "events": "write",
+        "devices": "write",
+        "groups": "write",
+        "plugins": "write",
+        "updates": "write",
+        "database": "write",
+        "config": "write",
+        "controlDevices": true,
+        "restart": true
+      }
+    }
+  ]
+}
