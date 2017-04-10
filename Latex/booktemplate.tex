@@ -1,0 +1,59 @@
+\documentclass[12pt]{book}
+\usepackage[width=4.375in, height=7.0in, top=1.0in, papersize={5.5in,8.5in}]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tipa}
+%\usepackage{txfonts}
+\usepackage{textcomp}
+%\usepackage{amsthm}
+%\usepackage{array}
+%\usepackage{xy}
+\usepackage{fancyhdr}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+
+%Colocar isso no outro doc e comentar style arduino
+
+\usepackage{listings}
+\usepackage{float}
+\usepackage{xcolor}
+
+\sloppy
+
+% set the default code style
+\lstset{
+    frame=tb, % draw a frame at the top and bottom of the code block
+    breaklines=true,
+    basicstyle=\scriptsize,
+    tabsize=4, % tab space width
+    showstringspaces=false, % don't mark spaces in strings
+    numbers=left, % display line numbers on the left
+    commentstyle=\color{green}, % comment color
+    keywordstyle=\color{blue}, % keyword color
+    stringstyle=\color{red} % string color
+}
+
+%\input{Arduino.tex}
+
+%colocar aqui os capitulos da apostila
+\input{secoes/0_comeco}
+\input{secoes/2_materiais_ferramentas}
+\input{secoes/1_internet_coisas}
+
+
+\input{secoes/3_projeto_a}
+\input{secoes/4_projeto_b}
+\input{secoes/5_projeto_c}
+
+%
+\backmatter
+%
+
+\nocite{faludi2010building}
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}

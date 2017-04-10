@@ -1,0 +1,62 @@
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt}
+\setlength{\footskip}{0in}
+\renewcommand{\footruleskip}{0pt}
+\fancypagestyle{plain}{%
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+}
+%
+%\parindent 0in
+\parskip 0.05in
+%
+\begin{document}
+\frontmatter
+%
+\chapter*{\Huge \center Internet das Coisas }
+\thispagestyle{empty}
+%{\hspace{0.25in} \includegraphics{./ru_sun.jpg} }
+\section*{\center Cloadoaldo Basaglia da Fonseca \\Douglas Lohmann \\Marco Aurélio Graciotto Silva \\Paulo Cesar Gonçalves}
+\newpage
+
+% licensa / direitos autorais
+\subsection*{\center \normalsize Este trabalho está licenciado sob uma Licença Creative Commons Atribuição 4.0 Internacional. Para ver uma cópia desta licença, visite \\ http://creativecommons.org/licenses/by/4.0/.}
+
+\subsection*{\center \normalsize Os diagramas de projeto foram construídos com o software Fritzing e estão licenciados sob uma Licença Creative Commons Atribuição 4.0 Internacional}
+
+\subsection*{\center \normalsize Este trabalho foi financiado pela Fundação Araucária - Apoio ao Desenvolvimento Científico e Tecnológico do Paraná, por meio do Edital Redes Digitais de Cidadania do Estado do Paraná (Ministério das Comunicações), aprovado em 2013. Foi desenvolvido por alunos e professores da  Universidade Tecnológica Federal do Paraná (UTFPR), campus Campo Mourão}
+
+\subsection*{\center \normalsize Uma versão online desse material está disponível em https://github.com/lohmanndouglas/Iot-Compute-Voce-Mesmo.git }
+
+
+%
+
+% dedicatoria 
+%\chapter*{\center \normalsize To my Son}
+%
+\tableofcontents
+%
+\mainmatter
+
+% Objetivos 
+\chapter{Uma Visão Geral}
+% your text here
+Computadores pessoais e smartphones formam uma rede de dispositivos conectados a Internet. A questão agora é permitir  que outros dispositivos tais como relógios, máquinas de lavar, geladeiras e demais objetos do nosso cotidiano possam conectar-se a rede e trocar informações. Esta fase em formação está introduzindo um novo paradigma chamado de Internet das Coisas (do inglês, Internet of Things - IoT), no qual pessoas, animais e coisas do nosso cotidiano estão conectados à rede e interagirem entre si.
+
+
+A Internet das Coisas mudará tudo, inclusive nós mesmos. Considerando o impacto que Internet já causou na comunicação, nos negócios, na ciência, no governo e na educação, percebemos claramente que a Internet é uma das mais importantes e poderosas invenções de toda a história humana \cite{daveevans2011}. Devido ao desenvolvimento das tecnologias de informação, principalmente da Internet, podemos nos comunicar tranquilamente com qualquer parte do mundo, Desta forma, possuímos a oportunidade de conhecer muitas coisas - novas pessoas, culturas, sistemas políticos, desenvolvimento de cada país e muitas coisas mais - por meio de alguns cliques. 
+
+
+Podemos dividir a Internet em três fases. A primeira fase é a Internet como uma rede de computadores. Na segunda fase, a Internet pode ser considerada uma rede de pessoas e comunidades e atualmente estamos vivendo a evolução para terceira fase, a Internet das Coisas (IoT). Nesta fase a rede passa a interligar vários tipos de objetos e dispositivos inteligentes do nosso cotidiano que vão interagir entre si e conosco \cite{nicbr}.
+Segundo \cite{atzori2010internet}, a ideia básica de IoT consiste na presença de uma diversidade de  objetos que interagem e cooperam entre si a fim de atingir um objetivo comum. Para tal compartilham informações utilizando métodos de endereçamento único e protocolos de comunicação padronizados. 
+
+Este material apresenta os principais conceitos relacionados a Internet das Coisas e também apresenta uma atividade prática para implementação de IoT. Os próximos tópicos são referencias básicas para a construção da rede de sensores e a comunicação dos sensores com a Internet. 

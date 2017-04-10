@@ -1,0 +1,52 @@
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}Uma Vis\IeC {\~a}o Geral}{1}
+\contentsline {chapter}{\numberline {2}Materiais e Softwares Utilizados}{3}
+\contentsline {section}{\numberline {2.1}Arduino}{3}
+\contentsline {subsection}{\numberline {2.1.1}Arduino IDE}{5}
+\contentsline {subsection}{\numberline {2.1.2}Arduino Uno}{6}
+\contentsline {section}{\numberline {2.2}Radio RF - nRF24l01}{7}
+\contentsline {section}{\numberline {2.3}Sensores e Atuadores}{8}
+\contentsline {subsection}{\numberline {2.3.1}DTH11}{8}
+\contentsline {subsection}{\numberline {2.3.2}LDR}{9}
+\contentsline {subsection}{\numberline {2.3.3}Rel\IeC {\'e}}{9}
+\contentsline {subsection}{\numberline {2.3.4}Sensor de Movimento (PIR)}{10}
+\contentsline {subsection}{\numberline {2.3.5}LED}{11}
+\contentsline {section}{\numberline {2.4}Protoboard}{11}
+\contentsline {section}{\numberline {2.5}Conectar todas as partes}{12}
+\contentsline {section}{\numberline {2.6}Conectando o Arduino ao R\IeC {\'a}dio}{13}
+\contentsline {section}{\numberline {2.7}Biblioteca Mysensors}{14}
+\contentsline {subsection}{\numberline {2.7.1}Aplica\IeC {\c c}\IeC {\~o}es da biblioteca MySensors}{14}
+\contentsline {subsection}{\numberline {2.7.2}Instalar Mysensors}{15}
+\contentsline {chapter}{\numberline {3}Infraestrutura da Internet das Coisas}{17}
+\contentsline {section}{\numberline {3.1}Componentes envolvidos}{17}
+\contentsline {subsection}{\numberline {3.1.1}O c\IeC {\'e}rebro}{17}
+\contentsline {subsection}{\numberline {3.1.2}O r\IeC {\'a}dio}{17}
+\contentsline {subsection}{\numberline {3.1.3}Software}{18}
+\contentsline {section}{\numberline {3.2}Constru\IeC {\c c}\IeC {\~a}o da Rede de Sensores e Atuadores}{18}
+\contentsline {subsection}{\numberline {3.2.1}N\IeC {\'o} sensor ou atuador}{20}
+\contentsline {subsection}{\numberline {3.2.2}N\IeC {\'o} repetidor}{20}
+\contentsline {subsection}{\numberline {3.2.3}N\IeC {\'o} gateway}{20}
+\contentsline {subsection}{\numberline {3.2.4}Controlador}{20}
+\contentsline {section}{\numberline {3.3}Entendendo o protocolo serial MySensors vers\IeC {\~a}o 1.5}{21}
+\contentsline {section}{\numberline {3.4}C\IeC {\'o}digos Mysensors}{22}
+\contentsline {section}{\numberline {3.5}Controlador Pimatic}{23}
+\contentsline {chapter}{\numberline {4}Projeto A}{25}
+\contentsline {section}{\numberline {4.1}Materiais}{25}
+\contentsline {section}{\numberline {4.2}Implementa\IeC {\c c}\IeC {\~a}o}{26}
+\contentsline {subsection}{\numberline {4.2.1}Gateway}{26}
+\contentsline {subsection}{\numberline {4.2.2}N\IeC {\'o} com sensor DTH11}{29}
+\contentsline {subsection}{\numberline {4.2.3}Controlador}{31}
+\contentsline {chapter}{\numberline {5}Projeto B}{35}
+\contentsline {section}{\numberline {5.1}Materiais}{35}
+\contentsline {section}{\numberline {5.2}Implementa\IeC {\c c}\IeC {\~a}o}{36}
+\contentsline {subsection}{\numberline {5.2.1}Gateway}{36}
+\contentsline {subsection}{\numberline {5.2.2}N\IeC {\'o} com sensor DTH11}{39}
+\contentsline {subsection}{\numberline {5.2.3}N\IeC {\'o} com sensor LDR}{41}
+\contentsline {subsection}{\numberline {5.2.4}Controlador}{42}
+\contentsline {chapter}{\numberline {6}Projeto C}{45}
+\contentsline {section}{\numberline {6.1}Materiais}{45}
+\contentsline {section}{\numberline {6.2}Implementa\IeC {\c c}\IeC {\~a}o}{46}
+\contentsline {subsection}{\numberline {6.2.1}Gateway}{46}
+\contentsline {subsection}{\numberline {6.2.2}N\IeC {\'o} com sensor DTH11 e LDR}{49}
+\contentsline {subsection}{\numberline {6.2.3}N\IeC {\'o} com atuador LED}{52}
+\contentsline {subsection}{\numberline {6.2.4}Controlador}{54}
