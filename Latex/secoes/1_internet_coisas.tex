@@ -8,15 +8,15 @@
 
 O Arduino foi a escolha para esse projeto, pois tem consumo de energia baixo, é fácil de programar,muitas bibliotecas já estão implementadas e são livres para uso, além disso, é um hardware livre. 
 
-Apesar de não ter um poder computacional muito alto, é ideal para uso nesse projeto. Além disso, ele tem pinos (22 no total) que são ideais para conectar sensores e botões. Outra característica é que o Arduino não possui sistema operacional.
+Apesar de não ter um poder computacional muito alto, o Arduino é ideal para uso nesse projeto. Além disso, ele tem pinos (22 no total) que são ideais para conectar sensores e botões. Outra característica, é que o Arduino não possui sistema operacional.
 
 \subsection{O rádio}
 
-Com a necessidade de comunicação e coleta de dados dos sensores e devido a possível distancia entre eles, é necessário uma conexão sem fio. Para tais fins, é utilizado um pequeno rádio, nesse caso, o modelo nRF24l01, que tem baixo consumo de bateria e baixo preço.
+Com a necessidade de comunicação e coleta de dados dos sensores e devido a possível distância entre eles, é necessário uma conexão sem fio. Para tais fins, é utilizado um pequeno rádio, nesse caso, o modelo nRF24l01, que tem baixo consumo de bateria e baixo preço.
 
 \subsection{Software}
 
-Além dos componentes de hardware vamos utilizar alguns softwares, na maior parte bibliotecas com alguns exemplos de sensores já implementados. 
+Além dos componentes de hardware, vamos utilizar alguns softwares, na maior parte bibliotecas com alguns exemplos de sensores já implementados. 
 
 \section{Construção da Rede de Sensores e Atuadores}
 
@@ -24,7 +24,7 @@ Utilizando a biblioteca e as plataformas descritas no Capítulo~\ref{MateSof}, �
 basicamente três componentes:
 controlador, gateway e nós finais, que são nós sensores e atuadores. Os nós sensores e atuadores são responsáveis
 pela interação com o ambiente, seja pela coleta de informações por meio de sensores, emissão de sinais de alerta ou ativação de certos dispositivos por meio de atuadores, por
-exemplo o ar condicionado ou uma lâmpada.
+exemplo, o ar condicionado ou uma lâmpada.
 
 Os principais componentes de uma rede de sensores são apresentados nas próximas subseções.
 
@@ -41,30 +41,30 @@ A Figura~\ref{fig:iot} ilustra a infraestrutura de uma rede de sensores e atuado
 	Esse nó realiza a leitura de sensores e pode também funcionar como um nó atuador, enviando e recebendo dados do gateway. Esse nó pode funcionar em modo Sleep para economizar bateria.
 
 \subsection{Nó repetidor}
-	Esse nó só é necessário quando os nós sensores e gateway não conseguem se comunicar, devido à distancia em que estão localizados, por esse motivo não está representado na Figura~\ref{fig:iot}. Esse nó tem como função repetir as dados para outros nós a fim de aumentar a distancia de comunicação entre os nós. Em muitas aplicações esse nó não esta presente.
+	Esse nó só é necessário quando os nós sensores e gateway não conseguem se comunicar, devido à distância em que estão localizados, por esse motivo não está representado na Figura~\ref{fig:iot}. Esse nó tem como função repetir as dados para outros nós a fim de aumentar a distância de comunicação entre os nós. Em muitas aplicações esse nó não está presente.
 
 \subsection{Nó gateway}
 
 O gateway atua na ligação entre o controlador e rede de rádios. Ele traduz as mensagens do rádio para um protocolo que pode ser entendido por um controlador. 
 
-Na biblioteca MySensors exite tres implementações de Gateway, o Ethernet Gateway, SerialGateway e MQTTGateway. Nesse material vamos utilizar o SerialGateway pela facilidade de implementação e também pela compatibilidade com o controlador escolhido.
+Na biblioteca MySensors existem três implementações de Gateway: o Ethernet Gateway, SerialGateway e MQTTGateway. Nesse material, vamos utilizar o SerialGateway pela facilidade de implementação e, também, pela compatibilidade com o controlador escolhido.
 	
 \subsection{Controlador}
 
 O controlador pode realizar as seguintes funções:
 \begin{itemize}
-    \item Enviar  parâmetros de configuração para os sensores na rede de rádio (tempo e identificadores de sensores únicos);
+    \item Enviar parâmetros de configuração para os sensores na rede de rádio (tempo e identificadores de sensores únicos);
     \item Acompanhar os dados mais recentes enviados pelos sensores e atuadores;
-    \item Fornecer informações de status de volta para sensores e atuadores; por exemplo o estado atual (on / off / loadLevel) para uma luz;
+    \item Fornecer informações de status de volta para sensores e atuadores, por exemplo, o estado atual (on / off / loadLevel) para uma luz;
     \item Fornecer controles de interface do usuário para atuadores;
-    \item Executa horários predefinidos ou cenas; por exemplo. ao pôr do sol acender as luzes do jardim.
+    \item Executar horários predefinidos ou cenas, por exemplo, ao pôr do sol acender as luzes do jardim.
 \end{itemize}
     
-Neste material vamos utilizar como controlador o Raspberry e o framework Pimatic.
+Neste material, vamos utilizar como controlador o Raspberry e o framework Pimatic.
 
 \section{Entendendo o protocolo serial MySensors versão 1.5}
 
-O protocolo utilizado para comunicação entre o serial gateway e controlador consiste de mensagens textuais em que cada dado é separado por ponto e virgula ( ;) e quebra de linha no final da mensagem. Sendo assim a mensagem possui a seguinte estrutura:
+O protocolo utilizado para comunicação entre o serial gateway e controlador consiste de mensagens textuais em que cada dado é separado por ponto e virgula (;) e quebra de linha no final da mensagem. Sendo assim, a mensagem possui a seguinte estrutura:
 
 %colocar uma caixa/imagem
 
@@ -78,25 +78,25 @@ O protocolo utilizado para comunicação entre o serial gateway e controlador co
 
 \begin{description}
   \item[node-id] identificação exclusiva do nó que envia ou deve receber a mensagem (endereço);
-  \item[child-sensor-id] Cada nó pode ter varios sensores ligados, esse campo identifica qual é sensor “child” do nó;
+  \item[child-sensor-id] Cada nó pode ter vários sensores ligados, esse campo identifica qual é o sensor “child” do nó;
   \item[message-type] Tipo de mensagem enviada.
   \item[ack] Outgoing: 0 = mensagem não reconhecida, 1 = pedido ack do nó de destino; Incoming: 0 = mensagem normal, 1 = esta é uma mensagem de ack;
-  \item[sub-type] Dependendo messageType este campo tem um significado diferente.
+  \item[sub-type] Dependendo da messageType, este campo tem um significado diferente.
   \item[payload] Carga útil (max 25 bytes).
   
 \end{description}
 
 \section{Códigos Mysensors}
 
-Nesta seção é apresentado um exemplo de código da biblioteca MySensors. Esse código apresenta as principais métodos utilizados na maioria dos exemplos. 
+Nesta seção é apresentado um exemplo de código da biblioteca MySensors. Esse código apresenta os principais métodos utilizados na maioria dos exemplos. 
 
 \lstinputlisting[language=, caption={Código Mysensors}]{code/exemplo.ino}
 
 %colocar srccode{} nas funções 
 
-Para iniciar precisamos criar uma instancia da biblioteca MySensors e depois ativada-lá com a instrução gw.begin(). Na primeira vez que o nó é ligado, o controlador atribui um id único a ele. Esse id é salvo na memória EEPROM do Arduino. Caso ele seja religado ou resetado, o id é automaticamente resgatado. O sensor deve ser apresentado para o controlador. Para isso é utilizado a função gw.present(child-sensor-id, sensor-type).
+Para iniciar, precisamos criar uma instância da biblioteca MySensors e depois ativá-la com a instrução gw.begin(). Na primeira vez que o nó é ligado, o controlador atribui um id único a ele. Esse id é salvo na memória EEPROM do Arduino. Caso ele seja religado ou resetado, o id é automaticamente resgatado. O sensor deve ser apresentado para o controlador. Para isso, é utilizado a função gw.present(child-sensor-id, sensor-type).
 
-Para enviar uma mensagem deve-se criar um container MyMessage usando a função msg(child-sensor-id, variable-type). No escopo da função loop a mensagem é enviada com o método send(msg.set(payload)).
+Para enviar uma mensagem deve-se criar um container MyMessage usando a função msg(child-sensor-id, variable-type). No escopo da função loop, a mensagem é enviada com o método send(msg.set(payload)).
 
 \section{Controlador Pimatic}
 

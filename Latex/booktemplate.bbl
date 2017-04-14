@@ -1,0 +1,29 @@
+\begin{thebibliography}{}
+
+\bibitem[Atzori et~al. 2010]{atzori2010internet}
+Atzori, L., Iera, A., and Morabito, G. (2010).
+\newblock The internet of things: A survey.
+\newblock {\em Computer networks}, 54(15):2787--2805.
+
+\bibitem[Evans 2011]{daveevans2011}
+Evans, D. (2011).
+\newblock A internet das coisas como a próxima evolução da internet está
+  mudando tudo.
+\newblock {\em Cisco IBSG © 2011 Cisco e/ou suas afiliadas. Todos os direitos
+  reservados.}
+
+\bibitem[Faludi 2010]{faludi2010building}
+Faludi, R. (2010).
+\newblock {\em Building Wireless Sensor Networks: with ZigBee, XBee, Arduino,
+  and Processing}.
+\newblock O'Reilly Media.
+
+\bibitem[NIC.br. 2015]{nicbr}
+NIC.br. (2015).
+\newblock A internet das coisas, explicada pelo nic.br.
+
+\bibitem[Pimatic 2015]{pimatic}
+Pimatic (2015).
+\newblock Controlador pimatic.
+
+\end{thebibliography}

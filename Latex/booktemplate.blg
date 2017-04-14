@@ -1,5 +1,51 @@
-[0] Config.pm:354> INFO - This is Biber 2.6
-[0] Config.pm:357> INFO - Logfile is 'booktemplate.blg'
-[22] biber:302> INFO - === Mon Apr 10, 2017, 09:34:47
-[44] Utils.pm:180> ERROR - Cannot find control file 'booktemplate.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[44] Biber.pm:113> INFO - ERRORS: 1
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: booktemplate.aux
+The style file: sbc.bst
+Database file #1: sbc-template.bib
+Warning--entry type for "nicbr" isn't style-file defined
+--line 24 of file sbc-template.bib
+Warning--entry type for "pimatic" isn't style-file defined
+--line 32 of file sbc-template.bib
+You've used 5 entries,
+            1935 wiz_defined-function locations,
+            496 strings with 4223 characters,
+and the built_in function-call counts, 1493 in all, are:
+= -- 144
+> -- 46
+< -- 4
++ -- 20
+- -- 14
+* -- 107
+:= -- 280
+add.period$ -- 13
+call.type$ -- 5
+change.case$ -- 31
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 61
+empty$ -- 106
+format.name$ -- 19
+if$ -- 278
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 26
+num.names$ -- 15
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 32
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 97
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 0
+while$ -- 12
+width$ -- 0
+write$ -- 59
+(There were 2 warnings)
