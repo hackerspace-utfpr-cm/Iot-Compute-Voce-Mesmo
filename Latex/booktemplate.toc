@@ -7,12 +7,12 @@
 \contentsline {section}{\numberline {2.2}Radio RF - nRF24l01}{7}
 \contentsline {section}{\numberline {2.3}Sensores e Atuadores}{8}
 \contentsline {subsection}{\numberline {2.3.1}DTH11}{8}
-\contentsline {subsection}{\numberline {2.3.2}LDR}{9}
+\contentsline {subsection}{\numberline {2.3.2}LDR}{8}
 \contentsline {subsection}{\numberline {2.3.3}Rel\IeC {\'e}}{9}
 \contentsline {subsection}{\numberline {2.3.4}Sensor de Movimento (PIR)}{10}
-\contentsline {subsection}{\numberline {2.3.5}LED}{11}
+\contentsline {subsection}{\numberline {2.3.5}LED}{10}
 \contentsline {section}{\numberline {2.4}Protoboard}{11}
-\contentsline {section}{\numberline {2.5}Conectar todas as partes}{12}
+\contentsline {section}{\numberline {2.5}Conex\IeC {\~a}o de todas as partes}{12}
 \contentsline {section}{\numberline {2.6}Conectando o Arduino ao R\IeC {\'a}dio}{13}
 \contentsline {section}{\numberline {2.7}Biblioteca Mysensors}{14}
 \contentsline {subsection}{\numberline {2.7.1}Aplica\IeC {\c c}\IeC {\~o}es da biblioteca MySensors}{14}

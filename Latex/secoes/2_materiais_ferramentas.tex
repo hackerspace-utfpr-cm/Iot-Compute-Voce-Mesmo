@@ -7,12 +7,13 @@ Este capítulo apresenta uma breve descrição dos principais materiais e softwa
 
 Arduino~\footnote{https://www.arduino.cc/en/Guide/Introduction} é uma plataforma de prototipagem de código aberto baseada na fácil utilização do software e hardware. As placas Arduino são capazes de efetuarem leitura de uma entrada (sensores) e transformar em uma de saída (Atuadores). O projeto Arduino nasceu no Ivrea Interaction Design Institute como uma ferramenta fácil para prototipagem rápida, destinado a estudantes sem conhecimento aprofundado em eletrônica e programação. 
 
-A plataforma Arduino possui uma IDE para a programação e para gravar códigos na placa, a IDE está possui suporte a Linux, Mac e Windows. 
+A plataforma Arduino possui uma IDE para a programação e para gravar códigos na placa, a IDE possui ainda suporte a Linux, Mac e Windows. 
 
 Existem diversas placas de hardware Arduino, sendo a mais comum a Arduino Uno. As placas diferem basicamente no microcontrolador embutido, no número de entradas/saídas, na frequência de processamento e entre outras configurações.
+
 Neste Material vamos utilizar o Arduino Uno por ser facilmente encontrado no mercado e apresentar baixo custo de aquisição se comparado com outras plataformas de hardware.
 
-A conexão de novos componentes no Arduino é possível por meio de placas de expansão (\textit{shields}), essa placas aumentam as funcionalidades do Arduino. Os \textit{shields} mais conhecidos são o \textit{shields} para controle de motores~\footnote{https://www.arduino.cc/en/Main/ArduinoMotorShieldR3} e o Ethernet para comunicação do Arduino com a Internte como o da Figura~\ref{fig:motorControl}.  
+A conexão de novos componentes no Arduino é possível por meio de placas de expansão (\textit{shields}), essa placas aumentam as funcionalidades do Arduino. Os \textit{shields} mais conhecidos são os \textit{shields} para controle de motores~\footnote{https://www.arduino.cc/en/Main/ArduinoMotorShieldR3} e o Ethernet para comunicação do Arduino com a Internet, como o da Figura~\ref{fig:motorControl}.  
 
 \begin{figure}[ht]
       \centering
@@ -22,7 +23,8 @@ A conexão de novos componentes no Arduino é possível por meio de placas de ex
 \end{figure}
 
 A comunicação do Arduino com \textit{shields} é realizada pelo protocolo Serial Peripheral Interface (SPI)~\footnote{https://www.arduino.cc/en/Reference/SPI
-}  é um protocolo de dados seriais síncronos utilizado em microcontroladores para comunicação entre o microcontrolador e um ou mais periféricos. Também pode ser utilizado entre dois microcontroladores.
+}  , ele é um protocolo de dados seriais síncronos utilizado em microcontroladores para comunicação entre o microcontrolador e um ou mais periféricos, sendo que também pode ser utilizado entre dois microcontroladores.
+
 A comunicação SPI sempre tem um master. Isto é, sempre um será o master e o restante será slave. Por exemplo, o Arduino é o master e os outros periféricos são slaves. Esta comunicação contém 4 conexões:
 
 \begin{itemize}
@@ -36,7 +38,7 @@ A comunicação SPI sempre tem um master. Isto é, sempre um será o master e o 
 
 Para programação no arduino, utiliza-se a linguagem Wiring. O ambiente de programação oferece recursos que facilitam a criação de aplicações e sua gravação no dispositivo.
 
-Os projetos (Sketches) são escritos na linguagem Wiring e salvos com a extensão .ino, possuem a estrutura:
+Os projetos (Sketches) são escritos na linguagem Wiring e salvos com a extensão .ino, possuindo a seguinte estrutura:
 
 \lstinputlisting[language=C++, caption={Estrutura código Arduino}]{code/arduino.ino}
 
@@ -44,7 +46,7 @@ A função setup() é o código de inicialização dos componentes, enquanto a f
 
 \subsection{Arduino Uno}
 
-O Arduino Uno~\footnote{https://www.arduino.cc/en/Main/ArduinoBoardUno} opera com uma velocidade de clock de 16 MHz, possui 14 pinos de entrada e saída digitais e 6 pinos de entrada e saída analógica, memória flash 32 KB (0.5 KB usados pelo Bootloader), memória SRAM de 2 KB e 1 KB de memória EEPROM. 
+O Arduino Uno~\footnote{https://www.arduino.cc/en/Main/ArduinoBoardUno} opera com uma velocidade de clock de 16 MHz, possui 14 pinos de entrada e saída digitais e 6 pinos de entrada e saída analógica, memória flash de 32 KB (0.5 KB usados pelo Bootloader), memória SRAM de 2 KB e 1 KB de memória EEPROM. 
 
 A placa pode ser alimentada pela conexão USB ou por uma fonte de alimentação externa. Para alimentação externa é utilizado um conector Jack com positivo no centro, sendo que a placa suporta alimentação de 6 à 20 volts. Porém, é recomendado que a fonte de alimentação externa possua tensão entre 7 e 12 volts. 
 
@@ -64,11 +66,11 @@ Para interface com o mundo analógico, a placa Arduino UNO possui 6 entradas, on
 
 Nesta apostila vamos utilizar o módulo de rádio frequência nRF24l01~\footnote{http://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRF24L01} fabricado pela Nordic, este módulo trabalha na frequência de 2.4 GHz.
 
-A conexão é realizada por um conector de 8 pinos muito próximos uns dos outros, o que impossibilita a conexão direta do módulo com a protoboard, sendo assim a conexão com o módulo pode ser feita com jumpers macho-femea, outra possibilidade é construir um shield para adaptação, para que o nRF24l01 encaixe na protoboard.
+A conexão é realizada por um conector de 8 pinos muito próximos uns dos outros, o que impossibilita a conexão direta do módulo com a protoboard. Sendo assim, a conexão com o módulo pode ser feita com jumpers macho-fêmea. Outra possibilidade é construir um shield para adaptação, para que o nRF24l01 encaixe na protoboard.
 
 O alcance do módulo varia de 10 metros em ambiente fechado à 50 metros em ambiente aberto. Uma outra vantagem é que um mesmo módulo pode atuar como emissor ou receptor, apenas realizando-se uma configuração por software. Sua tensão de alimentação é de 1,9 à 3.6V, e os pinos de sinal podem trabalhar normalmente com nível de sinal de 5V. 
 
-Existe uma versão do módulo com antena externa, essa versão possibilita distancia maior de comunicação entre os módulos, porém tem preço mais maior e não é tão compacto quanto o módulo com antena embutida. 
+Existe uma versão do módulo com antena externa, essa versão possibilita distância maior de comunicação entre os módulos, porém tem preço maior e não é tão compacto quanto o módulo com antena embutida. 
 
 \begin{figure}[ht]
       \centering
@@ -98,9 +100,9 @@ O sensor possui 4 pinos: um pino para o GND(ground), um para a alimentação(5V)
 
 \subsection{LDR}
 
-O LDR (do inglês, Light Dependent Resistor), ou Resistor dependente de Luz, é uma fotorresistência, ou seja, um resistor cuja sua resistência varia de acordo com a intensidade da luz que incidir sobre ele. 
+O LDR (do inglês, Light Dependent Resistor), ou Resistor dependente de Luz, é uma fotorresistência, ou seja, um resistor cuja resistência varia de acordo com a intensidade da luz que incidir sobre ele. 
 
-Utilizando um multímetro pode-se medir a resistência de um LDR quando exposto a uma determinada intensidade de luz. Basicamente um LDR vai ter sua resistência máxima quando estiver em completa escuridão e mínima quando uma luz muito brilhante estiver incindindo sobre ele.
+Utilizando um multímetro pode-se medir a resistência de um LDR quando exposto a uma determinada intensidade de luz. Basicamente, um LDR vai ter sua resistência máxima quando estiver em completa escuridão e mínima quando uma luz muito brilhante estiver incindindo sobre ele.
 
 \begin{figure}[H]
       \centering
@@ -115,7 +117,7 @@ Utilizando um multímetro pode-se medir a resistência de um LDR quando exposto 
 
 \subsection{Relé}
 
-O relé é um dispositivo eletromecânico capaz de desligar ou ligar outros dispositivos. Basicamente, o relé é acionado quando uma corrente elétrica passa a percorrer as espiras da bobina do mesmo, criando assim a um campo magnético que atrai ou repele uma alavanca responsável por ativar ou desligar o outro componente ligado ao relé. 
+O relé é um dispositivo eletromecânico capaz de desligar ou ligar outros dispositivos. Basicamente, o relé é acionado quando uma corrente elétrica passa a percorrer as espiras da bobina do mesmo, criando assim um campo magnético que atrai ou repele uma alavanca responsável por ativar ou desligar o outro componente ligado ao relé. 
 
 \begin{figure}[ht]
       \centering
@@ -128,7 +130,7 @@ O relé é um dispositivo eletromecânico capaz de desligar ou ligar outros disp
 
 \subsection{Sensor de Movimento (PIR)}
 
-O sensor de movimento (PIR)~\footnote{https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/}é basicamente feito de uma material piroelétrico, ou seja, seu potencial elétrico varia de acordo com a temperatura, tornando-o capaz de detectar alguns níveis de radiação infravermelha. Ele é construído em duas metades e as duas são conectadas de forma que a diferença de potencial entre elas seja interpretada como um nível alto ou baixo, fazendo assim a detecção de movimento.
+O sensor de movimento (PIR)~\footnote{https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/}é, basicamente, feito de um material piroelétrico, ou seja, seu potencial elétrico varia de acordo com a temperatura, tornando-o capaz de detectar alguns níveis de radiação infravermelha. Ele é construído em duas metades e as duas são conectadas de forma que a diferença de potencial entre elas seja interpretada como um nível alto ou baixo, fazendo assim a detecção de movimento.
 
 \begin{figure}[ht]
       \centering
@@ -142,7 +144,11 @@ O sensor de movimento (PIR)~\footnote{https://learn.adafruit.com/pir-passive-inf
 
 \subsection{LED}
 
-Light Emitting Diode(LED), ou diodo emissor de luz, é utilizado para emissão de luz em locais onde lampadas não são viáveis, por exemplo em produtos da microeletrônica como sinais de avisos. Existem também LEDs de tamanhos maiores, como os utilizados em sinais de transito. Uma característica do LED é seu baixo consumo de energia, sendo uma alternativa viável para iluminação de ambientes. Outra vantagem é que sua durabilidade é maior que as outras formas de emissão de luz presentes no mercado. Na maioria dos projetos vamos utilizar o LED como atuador para emitir sinais de aviso. Mais detalhes sobre o funcionamento do LED estão disponíveis em http:\/\/electronics.howstuffworks.com\/led.htm
+Light Emitting Diode (LED) ou diodo emissor de luz, é utilizado para emissão de luz em locais onde lâmpadas não são viáveis, por exemplo em produtos da microeletrônica, como sinais de avisos. Existem também LEDs de tamanhos maiores, como os utilizados em sinais de trânsito.
+
+Uma característica marcante do LED diz respeito ao seu baixo consumo de energia, sendo uma alternativa viável para iluminação de ambientes. Outra característica importante é que sua durabilidade é maior que as outras formas de emissão de luz presentes no mercado.
+
+Na maioria dos projetos vamos utilizar o LED como atuador para emitir sinais de aviso. Mais detalhes sobre o funcionamento do LED estão disponíveis em http:\/\/electronics.howstuffworks.com\/led.htm
 
 % [https://en.wikipedia.org/wiki/Light-emitting_diode]
 % [http://electronics.howstuffworks.com/led.htm]
@@ -157,7 +163,7 @@ Light Emitting Diode(LED), ou diodo emissor de luz, é utilizado para emissão d
 
 \section{Protoboard}
 
-É uma placa com uma matriz de furos e conexões condutoras utilizadas para a prototipação de circuitos eletrônicos.
+A Protoboard é uma placa com uma matriz de furos e conexões condutoras utilizadas para a prototipação de circuitos eletrônicos.
 
 \begin{figure}[ht]
       \centering
@@ -166,11 +172,11 @@ Light Emitting Diode(LED), ou diodo emissor de luz, é utilizado para emissão d
       \label{fig:protoboard}
 \end{figure}
 
-A Figura~\ref{fig:protoboard} ilustra uma protoboard. Essa placa tipicamente possui trilhas conectas na vertical que possibilitam a ligação entre componentes e trilhas isoladas na horizontal. 
+A Figura~\ref{fig:protoboard} ilustra uma protoboard. Essa placa tipicamente possui trilhas conectadas na vertical que possibilitam a ligação entre componentes e trilhas isoladas na horizontal. 
 
-\section{Conectar todas as partes}
+\section{Conexão de todas as partes}
 
-Para conectar os sensores e atuadores a placa do Arduino, é utilizado cabo jumper. Podem ser encontrado em 3 combinações: macho-macho, macho-femea e femea-femea.
+Para conectar os sensores e atuadores à placa do Arduino, é utilizado cabo jumper. Pode ser encontrado em 3 combinações: macho-macho, macho-fêmea e fêmea-fêmea.
 
 A Figura~\ref{fig:Jmacho} representa jumpers macho. 
 
@@ -196,7 +202,7 @@ A Figura~\ref{fig:Jfemea} representa jumpers fêmea.
 
 O rádio nRF24l01+ se comunica com Arduino via interface SPI. O rádio deve ser alimentado com uma tensão de 3.3 volts. 
 
-Como o radio possui conector de 8 pinos não é possível conecta-lo a protoboard. Então devemos utilizar conectores macho-fêmea, como ilustra a Figura~\ref{fig:gat}, para fazer ligação ou construir um shield para adaptação do modulo.
+Como o rádio possui conector de 8 pinos, não é possível conectá-lo a protoboard. Então, devemos utilizar conectores macho-fêmea, como ilustra a Figura~\ref{fig:gat}, para fazer ligação ou construir um shield para adaptação do módulo.
 
 \begin{figure}[H]
       \centering
@@ -207,19 +213,19 @@ Como o radio possui conector de 8 pinos não é possível conecta-lo a protoboar
 
 \section{Biblioteca Mysensors}
 
-Mysensors~\footnote{http://www.mysensors.org/} é uma API que fornece um conjunto de protocolos e rotinas para comunicação entre o Arduino, o Radio transmissor e sensores. 
-Com esta biblioteca é possível criar uma abstração de algumas camadas de hardware e software evitando que o usuário tenha que implementar rotinas de baixo nível e protocolos para realizar a comunicação entre o Arduino e Modulo de radio frequência. A biblioteca fornece códigos de exemplos e uma estrutura de rede já implementada para Internet das Coisas. 
+Mysensors~\footnote{http://www.mysensors.org/} é uma API que fornece um conjunto de protocolos e rotinas para comunicação entre o Arduino, o Rádio transmissor e sensores. 
+Com esta biblioteca é possível criar uma abstração de algumas camadas de hardware e software evitando que o usuário tenha que implementar rotinas de baixo nível e protocolos para realizar a comunicação entre o Arduino e Módulo de rádio frequência. A biblioteca fornece códigos de exemplos e uma estrutura de rede já implementada para Internet das Coisas. 
 
 \subsection{Aplicações da biblioteca MySensors}
 
 A biblioteca MySensors fornece uma infinidade de projetos com exemplos de sensores e atuadores já implementados. Algumas possibilidades de aplicação da biblioteca são:
 
 \begin{itemize}
-    \item Pequenas automações residenciais tais como um portão de garagem automático que abre quando carro se aproxima da entrada ou quando ativado pelo seu \textit{smartphone}; 
+    \item Pequenas automações residenciais, tais como um portão de garagem automático que abre quando um carro se aproxima da entrada ou quando ativado pelo seu \textit{smartphone}; 
 
     \item Coletar a umidade do ambiente dentro da casa para controlar a ventilação;
 
-    \item Criar uma fechadura inteligente para um determinado comodo ou armário; 
+    \item Criar uma fechadura inteligente para um determinado cômodo ou armário; 
     
     \item Criar um dispositivo que avisa através de uma mensagem em seu \textit{smartphone} quando a temperatura do frezzer subir caso alguém tenha deixado a porta aberta;
 
@@ -228,7 +234,7 @@ A biblioteca MySensors fornece uma infinidade de projetos com exemplos de sensor
 
 \subsection{Instalar Mysensors}
 
-MySensors é uma biblioteca que funciona integrada com a API do Arduino, para instalação basta adiciona-lá a pasta \textit{libraries} do Arduino IDE.
+MySensors é uma biblioteca que funciona integrada com a API do Arduino, para instalação basta adicioná-la a pasta \textit{libraries} do Arduino IDE.
 
 
 
